@@ -1,4 +1,5 @@
 venv/
+.env
 db.sqlite3
 email_errors.log
 harambe_service.json
