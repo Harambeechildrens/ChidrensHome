@@ -20,10 +20,6 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-application = get_wsgi_application()
-
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'becky_project.settings')
 
 
 # Quick-start development settings - unsuitable for production
@@ -84,8 +80,6 @@ INSTALLED_APPS = [
       'allauth',
       'allauth.account',
     
-      
-
 
     # Apps 
     'main_app',
