@@ -27,7 +27,9 @@
                         <td>{{ donor.donation_date }}</td>
                         <td>{{ donor.donation_type }}</td>
                         <td>
-                            <a href="{% url 'donor_delete' donor.donor_id %}" class="btn btn-danger">Delete</a>
+                            {%if user.is_superuser %}
+                            <a href="{% url 'donor_delete' donor.donor_id  %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this Donor? This will remove them from the database and Google Sheets.');">Delete</a>
+                            {% endif %}
                         </td>
                     </tr>
                     {% endfor %}
