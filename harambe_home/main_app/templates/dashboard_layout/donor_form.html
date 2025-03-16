@@ -1,0 +1,25 @@
+{% extends "dashboard_layout/master.html" %}
+
+{% block body %}
+<div class="container-fluid">
+    <h2 class="mb-4">Register Donor</h2>
+
+    {% if messages %}
+        <div class="alert alert-success">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="POST" action="{% url 'donor_add' %}">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6">
+                {{ form.as_p }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Register Donor</button>
+    </form>
+</div>
+{% endblock %}
