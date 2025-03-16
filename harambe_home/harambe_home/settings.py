@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 application = get_wsgi_application()
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'harambe_home.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'becky_project.settings')
 
 
 # Quick-start development settings - unsuitable for production
