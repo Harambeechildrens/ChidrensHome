@@ -32,9 +32,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['chidrenshome.onrender.com/','127.0.0.1:8000','127.0.0.1']
+ALLOWED_HOSTS = ['*','f74e-41-90-172-57.ngrok-free.app']
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://f74e-41-90-172-57.ngrok-free.app",
+]
 
 
 
